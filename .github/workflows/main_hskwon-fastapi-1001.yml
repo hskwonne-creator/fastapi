@@ -64,3 +64,4 @@ jobs:
           app-name: 'hskwon-fastapi-1001'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_53A88A3AAD854FA6B1150982EF01944C }}
+          startup-command: 'gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app'
